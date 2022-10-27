@@ -42,12 +42,18 @@ function file(){
 
 exports.f = file;
 
+const rename = require('gulp-rename');
 
 //壓縮css
 const cleanCSS = require('gulp-clean-css');
 
 function cssminify(){
-  return src('src/*.css').pipe(cleanCSS()).pipe(dest('dist/css'))
+  return src('src/*.css')
+  .pipe(cleanCSS())
+  .pipe(rename({
+     extname : ".min.css"
+  }))
+  .pipe(dest('dist/css'))
 }
 
 
@@ -59,7 +65,12 @@ const uglify = require('gulp-uglify');
 
 
 function js(){
-  return src('src/js/*.js').pipe(uglify()).pipe(dest('dist/js'));
+  return src('src/js/*.js')
+  .pipe(uglify())
+  .pipe(rename({
+     extname : ".min.js"
+  }))
+  .pipe(dest('dist/js'));
 }
 
 exports.minijs = js;
@@ -69,3 +80,18 @@ exports.minijs = js;
 exports.combine = parallel(js , cssminify)
 
 // ============ end ============
+
+
+// rename 改檔名
+
+
+function cssname(){
+   return src('src/*.css')
+   .pipe(rename({
+     extname : '.min.css'   
+    }))
+   .pipe(dest('dist/css'))
+}
+
+exports.re = cssname;
+
