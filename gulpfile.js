@@ -66,7 +66,6 @@ exports.minijs = js;
 
 //====== 同時壓縮 css js ======
 
+exports.combine = parallel(js , cssminify)
 
-
-
-
+// ============ end ============
