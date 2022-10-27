@@ -36,7 +36,8 @@ exports.async = parallel(A , B);
 
 
 function file(){
-  return src(['src/*.html' , 'src/*.css']).pipe(dest('dist/'))
+  return src(['src/*.html' , 'src/*.css' , 'src/**/*.js' , '!src/about.html'])
+  .pipe(dest('dist/')) // 打包兩種不同檔案格式  !排除  **下一層目錄
 }
 
 exports.f = file;
