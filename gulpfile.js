@@ -31,3 +31,15 @@ function B(cb){
 
 exports.sync = series(A , B); 
 exports.async = parallel(A , B);
+
+// 以上使用在最後打包的流程控管
+
+
+function file(){
+  return src('src/index.html').pipe(dest('dist/'))
+}
+
+exports.f = file;
+
+
+
