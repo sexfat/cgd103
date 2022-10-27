@@ -1,5 +1,9 @@
 body {
   background-color: #fff;
+  font-size: 20px;
+}
 
-
+.wrapper {
+ width:  1200px;
+ margin: 0 auto;
 }
