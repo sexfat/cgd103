@@ -1,1 +1,1 @@
-console.log('start');
+function a(n){return 10*n}console.log("start");

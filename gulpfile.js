@@ -54,3 +54,17 @@ function cssminify(){
 exports.css = cssminify
 
 
+//  壓縮 js
+const uglify = require('gulp-uglify');
+
+
+function js(){
+  return src('src/js/*.js').pipe(uglify()).pipe(dest('dist/js'));
+}
+
+exports.minijs = js;
+
+
+
+
+
