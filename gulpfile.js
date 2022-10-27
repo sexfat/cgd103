@@ -36,7 +36,7 @@ exports.async = parallel(A , B);
 
 
 function file(){
-  return src('src/index.html').pipe(dest('dist/'))
+  return src(['src/*.html' , 'src/*.css']).pipe(dest('dist/'))
 }
 
 exports.f = file;
