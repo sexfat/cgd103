@@ -128,6 +128,14 @@ function html() {
 exports.h = html;
 
 
+function watchfile(){
+   watch(['src/*.html' , 'src/layout/*.html'], html)
+   watch(['src/sass/*.scss' , 'src/sass/**/*.scss'] , styleSass)
+}
+
+
+exports.w = watchfile;
+
 
 
 
