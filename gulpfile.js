@@ -43,4 +43,14 @@ function file(){
 exports.f = file;
 
 
+//壓縮css
+const cleanCSS = require('gulp-clean-css');
+
+function cssminify(){
+  return src('src/*.css').pipe(cleanCSS()).pipe(dest('dist/css'))
+}
+
+
+exports.css = cssminify
+
 
