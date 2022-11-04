@@ -89,6 +89,21 @@ $class : 'bottom';
                 padding: 10px 20px;
                 background-color: rgb(247, 0, 255);
 
+                //偽元素
+                a {
+                   color : rgb(222, 0, 0);
+                   &:hover {
+                     color:rgb(71, 0, 0)
+                   }
+                   &::after {
+                    content: '';
+                   }
+                   &::before {
+                      content: '';
+                   }
+                }
+                // a:hover {}
+
             }
         }
     }

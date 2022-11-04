@@ -61,6 +61,18 @@ div {
   padding: 10px 20px;
   background-color: rgb(247, 0, 255);
 }
+.wrapper nav ul li a {
+  color: rgb(222, 0, 0);
+}
+.wrapper nav ul li a:hover {
+  color: rgb(71, 0, 0);
+}
+.wrapper nav ul li a::after {
+  content: "";
+}
+.wrapper nav ul li a::before {
+  content: "";
+}
 
 .index h1 {
   font-size: 40px;
