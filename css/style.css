@@ -34,4 +34,29 @@ div {
   margin-bottom: 10px;
 }
 
+.wrapper {
+  width: 100%;
+  background-color: rgb(0, 110, 255);
+}
+.wrapper nav {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrapper nav .logo {
+  width: 150px;
+  height: 50px;
+  background-color: #666;
+}
+.wrapper nav ul {
+  list-style: none;
+  display: flex;
+}
+.wrapper nav ul li {
+  padding: 10px 20px;
+  background-color: rgb(247, 0, 255);
+}
+
 /*# sourceMappingURL=style.css.map */
