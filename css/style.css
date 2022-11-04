@@ -39,7 +39,7 @@ body {
   font-size: 36px;
 }
 .wrapper nav {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -108,6 +108,11 @@ body {
   background-color: #eee;
   height: 100px;
 }
+@media all and (max-width: 720px) {
+  .box-1 {
+    width: 100%;
+  }
+}
 
 .box-2 {
   width: 136px;
@@ -117,17 +122,33 @@ body {
   background-color: #f20;
   height: 100px;
 }
+@media all and (max-width: 720px) {
+  .box-2 {
+    width: 100%;
+    margin: 0px auto 0;
+    border: 1px solid #333;
+    border-radius: 10px;
+  }
+}
 
 .box-3 {
   border: 1px solid #f20;
   border-radius: 50%;
+  color: rgb(0, 110, 255);
+  background-color: rgb(255, 84, 84);
   width: 100px;
   height: 100px;
   margin: 0 auto;
 }
 
 .wrapper {
-  width: 100%;
+  width: 1200px;
+  margin: 0 auto;
+}
+@media all and (max-width: 720px) {
+  .wrapper {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

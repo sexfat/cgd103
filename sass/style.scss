@@ -85,7 +85,7 @@ $class : 'bottom';
 
     }
     nav {
-        width: 1200px;
+        max-width: 1200px;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
@@ -190,26 +190,54 @@ $w : 1400px;
 
 .box-1 {
  @include boxcenter(200px);
+ @include m(){
+   width: 100%;
+ }
  background-color: #eee;
  height: 100px;
 }
 
 .box-2 {
   @include boxcenter(136px);
+  @include m(){
+    @include boxcenter(100%);
+  }
   background-color: #f20;
   height: 100px;
 }
 
 .box-3 {
-  @include border(#f20,  50%);
+  @include border(#f20,  50%){
+    color:rgb(0, 110, 255);
+    background-color: rgb(255, 84, 84);
+  };
   width:100px;
   height: 100px;
   margin: 0 auto;
 }
 
+
+
+
+
 .wrapper {
-   @include layout(full);
+    @include layout(1200);
+    @include m(){
+        @include layout(full);
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

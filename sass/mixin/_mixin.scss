@@ -10,6 +10,7 @@
 @mixin border($borderColor , $borderRadius){
     border: 1px solid $borderColor;
     border-radius: $borderRadius;
+    @content;
 }
 
 @mixin boxcenter($w , $top: 0px){
@@ -17,5 +18,11 @@
     margin: $top auto 0;
     @include border(#333, 10px); 
  }
+
+ @mixin m(){
+    @media all and (max-width: $m-breakpoint) {
+        @content;
+    }
+} 
 
 
