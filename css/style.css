@@ -1,5 +1,10 @@
 @charset "UTF-8";
 /*css 註解*/
+.btn {
+  background-color: rgb(202, 228, 255);
+  color: rgb(0, 123, 255);
+}
+
 body {
   margin: 10px 20px 5px 4px;
   padding: 0;
@@ -80,14 +85,28 @@ div {
   content: "";
 }
 
-.index h1 {
-  font-size: 40px;
-  color: aquamarine;
+.box {
+  width: 20px;
+  height: 80px;
+  margin: 100px;
+  font: 4px;
 }
 
-.about h1 {
-  font-size: 60px;
-  color: #666;
+.wrapper-full {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.btn {
+  padding: 10px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s all ease;
+  border: 1px solid #333;
+  background-color: #e2e2e2;
+}
+.btn:hover {
+  background-color: #a3a3a3;
 }
 
 /*# sourceMappingURL=style.css.map */

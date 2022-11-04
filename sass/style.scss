@@ -6,6 +6,16 @@
 @import 'base/color';
 @import 'base/common';
 
+// component
+@import 'components/btn';
+
+
+// layout 
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/login';
+@import 'layout/nav';
+
 // css => @import url();
 
 
@@ -116,18 +126,45 @@ $class : 'bottom';
         }
     }
 }
+// 運算
 
-.index {
-  h1 {
-    font-size: 40px;
-    color: aquamarine;
-  }
-
+.box {
+  width:  10px + 10;
+  height:  100px - 20px;
+  margin: 10 * 10 +px;
+  font : (20 / 5) + px; //除法要特別注意 
 }
-.about {
-  h1 {
-    font-size: 60px;
-    color: #666
 
+$w : 1200;
+
+.wrapper-full {
+  @if $w == 100 {
+    width: 100vw;
+  }@else if $w == 1200 {
+    width: 1200px;
+    margin: 0 auto;
   }
 }
+
+
+.btn {
+    $outline : true;
+    padding: 10px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: .3s all ease;
+    @if $outline{
+        border: 1px solid #333;
+        background-color: #e2e2e2;
+        &:hover {
+            background-color: #a3a3a3;  
+        }
+    }@else {
+        background-color: #333;
+        color: #fff;
+        &:hover {
+            background-color: rgb(19, 19, 19);  
+        }  
+    }
+}
+
