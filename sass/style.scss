@@ -1,0 +1,21 @@
+/*css 註解*/
+$fontSize : 16px; // 數值
+$color : #333; // 顏色
+$bgc : #fff;//背景色
+$fontFamily : '微軟正黑體'; //字串
+$margin : 10px 20px 5px 4px; // list
+
+
+
+body {
+   margin: $margin;
+   padding: 0;
+   font-size: $fontSize;
+   color: $color;
+   background-color: $bgc;
+   font-family: $fontFamily;
+}
+
+
+
+
