@@ -149,15 +149,17 @@ $w : 1200;
 
 .btn {
     $outline : true;
+    $outline_bgc : #e2e2e2;
+    
     padding: 10px 20px;
     text-align: center;
     cursor: pointer;
     transition: .3s all ease;
     @if $outline{
         border: 1px solid #333;
-        background-color: #e2e2e2;
+        background-color: $outline_bgc;
         &:hover {
-            background-color: #a3a3a3;  
+            background-color: darken($outline_bgc  , 60); //sass顏色函式 
         }
     }@else {
         background-color: #333;
