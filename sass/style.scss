@@ -211,3 +211,21 @@ $w : 1400px;
   margin: 0 auto;
 }
 
+
+@mixin layout($w){
+    @if $w == 'full' {
+        width: 100%;
+      }@else{
+        width: $w + px;
+        margin: 0 auto;
+      }
+}
+
+
+.wrapper {
+   @include layout(1200);
+}
+
+
+
+
