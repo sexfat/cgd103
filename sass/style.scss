@@ -236,13 +236,18 @@ $w : 1400px;
  }
 }
 
-
-@for $i from 1 through 100 {
-  .push-#{$i} {
-    position: relative;
-    left: $i * 1px
-  }
+@mixin push($num){
+    @for $i from 1 through $num {
+        .push-#{$i} {
+          position: relative;
+          left: $i * 1px
+        }
+      }
 }
+
+
+@include push(100)
+
 
 
 
