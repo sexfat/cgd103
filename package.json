@@ -1,0 +1,23 @@
+{
+  "name": "cgd103_gulp",
+  "version": "1.0.0",
+  "description": "講義路徑:\r https://spiny-cheese-0b2.notion.site/Sass-0bf5c6c7ba1c4f63b8b4c9513c4f810b",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sexfat/cgd103.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sexfat/cgd103/issues"
+  },
+  "homepage": "https://github.com/sexfat/cgd103#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.2"
+  }
+}

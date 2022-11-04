@@ -1,11 +1,13 @@
 /*css 註解*/
-$fontSize : 16px; // 數值
-$color : #333; // 顏色
-$bgc : #fff; //背景色
-$fontFamily : '微軟正黑體'; //字串
-$margin : 10px 20px 5px 4px; // list
-$null : null; //空值 
-$w : false; // 用在判斷式上
+
+// scss 外部檔案
+//變數
+@import 'base/font';
+@import 'base/color';
+@import 'base/common';
+
+// css => @import url();
+
 
 body {
     margin: $margin;
@@ -92,6 +94,12 @@ $class : 'bottom';
                 //偽元素
                 a {
                    color : rgb(222, 0, 0);
+                    &:first-child {
+                    color : rgb(157, 255, 0);
+                     &:hover {
+                        color : rgb(0, 217, 255);
+                     }
+                   }
                    &:hover {
                      color:rgb(71, 0, 0)
                    }

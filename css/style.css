@@ -64,6 +64,12 @@ div {
 .wrapper nav ul li a {
   color: rgb(222, 0, 0);
 }
+.wrapper nav ul li a:first-child {
+  color: rgb(157, 255, 0);
+}
+.wrapper nav ul li a:first-child:hover {
+  color: rgb(0, 217, 255);
+}
 .wrapper nav ul li a:hover {
   color: rgb(71, 0, 0);
 }
