@@ -42,14 +42,14 @@ body {
 
 
 
-.b {
-    $b : 10px !global; // 轉成全域變數
-    margin: $b;
-}
+// .b {
+//     //$b : 10px !global; // 轉成全域變數
+//     //margin: $b;
+// }
 
-div {
-    margin: $b;
-}
+// div {
+//     margin: $b;
+// }
 
 // 改變權重 !default
 $a : 20px;
@@ -120,7 +120,6 @@ $class : 'bottom';
                       content: '';
                    }
                 }
-                // a:hover {}
 
             }
         }
@@ -131,8 +130,8 @@ $class : 'bottom';
 .box {
   width:  10px + 10;
   height:  100px - 20px;
-  margin: 10 * 10 +px;
-  font : (20 / 5) + px; //除法要特別注意 
+  margin: 10 * 10 + px;
+  //font : calc(20 / 5) + px; //除法要特別注意 
 }
 
 $w : 1200;
@@ -173,18 +172,42 @@ $w : 1200;
 // mixin 
 $w : 1400px;
 
-@mixin boxcenter($w){
+@mixin border($borderColor , $borderRadius){
+ border: 1px solid $borderColor;
+ border-radius: $borderRadius;
+}
+
+//不好寫法
+// @mixin boxcenter($w , $top ,$borderColo ,$borderRadius ){
+//     width: $w; 
+//     margin: $top auto 0;
+//     border: 1px solid $borderColor;
+//     border-radius: $borderRadius;
+//  }
+
+
+@mixin boxcenter($w , $top: 0px){
    width: $w; 
-   margin: 0 auto;
+   margin: $top auto 0;
+   @include border(#333, 10px); 
 }
 
 .box-1 {
- @include boxcenter(1200px);
+ @include boxcenter(200px);
  background-color: #eee;
+ height: 100px;
 }
 
 .box-2 {
-  @include boxcenter(1366px);
+  @include boxcenter(136px);
   background-color: #f20;
+  height: 100px;
+}
+
+.box-3 {
+  @include border(#f20,  50%);
+  width:100px;
+  height: 100px;
+  margin: 0 auto;
 }
 

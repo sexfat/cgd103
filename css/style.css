@@ -19,14 +19,6 @@ body {
   margin: 0 auto;
 }
 
-.b {
-  margin: 10px;
-}
-
-div {
-  margin: 10px;
-}
-
 .a {
   font-size: 20px;
 }
@@ -89,7 +81,6 @@ div {
   width: 20px;
   height: 80px;
   margin: 100px;
-  font: 4px;
 }
 
 .wrapper-full {
@@ -110,15 +101,29 @@ div {
 }
 
 .box-1 {
-  width: 1200px;
-  margin: 0 auto;
+  width: 200px;
+  margin: 0px auto 0;
+  border: 1px solid #333;
+  border-radius: 10px;
   background-color: #eee;
+  height: 100px;
 }
 
 .box-2 {
-  width: 1366px;
-  margin: 0 auto;
+  width: 136px;
+  margin: 0px auto 0;
+  border: 1px solid #333;
+  border-radius: 10px;
   background-color: #f20;
+  height: 100px;
+}
+
+.box-3 {
+  border: 1px solid #f20;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=style.css.map */
