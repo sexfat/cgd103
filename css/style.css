@@ -38,6 +38,9 @@ div {
   width: 100%;
   background-color: rgb(0, 110, 255);
 }
+.wrapper h1 {
+  font-size: 36px;
+}
 .wrapper nav {
   width: 1200px;
   margin: 0 auto;
@@ -57,6 +60,16 @@ div {
 .wrapper nav ul li {
   padding: 10px 20px;
   background-color: rgb(247, 0, 255);
+}
+
+.index h1 {
+  font-size: 40px;
+  color: aquamarine;
+}
+
+.about h1 {
+  font-size: 60px;
+  color: #666;
 }
 
 /*# sourceMappingURL=style.css.map */
