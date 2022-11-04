@@ -21,8 +21,42 @@ body {
     @if $w {
         width: 100%;
     }
+
     @else {
         width: 1200px;
         margin: 0 auto;
     }
+}
+
+
+
+.b {
+    $b : 10px !global; // 轉成全域變數
+    margin: $b;
+}
+
+div {
+    margin: $b;
+}
+
+// 改變權重 !default
+$a : 20px;
+$a : 30px !default; //預設值
+
+
+.a {
+    font-size: $a;
+}
+
+//轉型字串
+$url : icon1;
+
+.icon {
+    background-image: url('#{$url}.jpg');
+}
+
+
+$class : 'bottom';
+.#{$class} {
+    margin-#{$class}: 10px;
 }

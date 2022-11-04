@@ -14,4 +14,24 @@ body {
   margin: 0 auto;
 }
 
+.b {
+  margin: 10px;
+}
+
+div {
+  margin: 10px;
+}
+
+.a {
+  font-size: 20px;
+}
+
+.icon {
+  background-image: url("icon1.jpg");
+}
+
+.bottom {
+  margin-bottom: 10px;
+}
+
 /*# sourceMappingURL=style.css.map */
