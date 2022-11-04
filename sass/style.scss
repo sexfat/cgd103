@@ -11,6 +11,7 @@
 
 // component
 @import 'components/btn';
+@import 'components/grid';
 
 
 // layout 
@@ -246,7 +247,15 @@ $w : 1400px;
 }
 
 
-@include push(100)
+// @include push(100);
+
+
+
+
+
+
+
+
 
 
 

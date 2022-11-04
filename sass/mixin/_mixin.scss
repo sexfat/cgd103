@@ -25,4 +25,20 @@
     }
 } 
 
+@mixin t(){
+    @media all and (max-width: $t-breakpoint) {
+        @content;
+    }
+} 
+
+
+
+@mixin grid($num , $s:null){
+    @for $i from 1 through $num {
+        .col#{$s}-#{$i} {
+           width: ($i / $num) * 100%;
+        }
+      }
+}
+
 
