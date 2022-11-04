@@ -109,4 +109,16 @@ div {
   background-color: #494949;
 }
 
+.box-1 {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: #eee;
+}
+
+.box-2 {
+  width: 1366px;
+  margin: 0 auto;
+  background-color: #f20;
+}
+
 /*# sourceMappingURL=style.css.map */

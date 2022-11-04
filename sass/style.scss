@@ -150,7 +150,7 @@ $w : 1200;
 .btn {
     $outline : true;
     $outline_bgc : #e2e2e2;
-    
+
     padding: 10px 20px;
     text-align: center;
     cursor: pointer;
@@ -168,5 +168,23 @@ $w : 1200;
             background-color: rgb(19, 19, 19);  
         }  
     }
+}
+
+// mixin 
+$w : 1400px;
+
+@mixin boxcenter($w){
+   width: $w; 
+   margin: 0 auto;
+}
+
+.box-1 {
+ @include boxcenter(1200px);
+ background-color: #eee;
+}
+
+.box-2 {
+  @include boxcenter(1366px);
+  background-color: #f20;
 }
 
