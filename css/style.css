@@ -348,4 +348,24 @@ body {
   background-image: url("images/img4.jpg");
 }
 
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+span {
+  font-size: 16px;
+}
+
+* {
+  font-size: 14px;
+}
+
 /*# sourceMappingURL=style.css.map */

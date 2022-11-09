@@ -295,3 +295,20 @@ $images:img1 img2 img3 img4; //list
   }
 
 }
+
+$title : (
+  'h1' : 40px,
+  'h2' : 30px,
+  'h3' : 25px,
+  'span' : 16px,
+  '*' : 14px
+); //map
+
+@each $k , $v in $title {
+  #{$k} {
+    font-size: $v;
+  }
+}
+
+
+
