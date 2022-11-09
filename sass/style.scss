@@ -82,11 +82,6 @@ $class : 'bottom';
   width: 100%;
   background-color: rgb(0, 110, 255);
 
-  h1 {
-    font-size: 36px;
-
-  }
-
   nav {
     max-width: 1200px;
     margin: 0 auto;
@@ -260,14 +255,6 @@ $w : 1400px;
 //   }
 // }
 
-@mixin push($num) {
-  @for $i from 1 through $num {
-    .push-#{$i} {
-      position: relative;
-      left: $i * 1px
-    }
-  }
-}
 
 
 // @include push(100);
@@ -282,7 +269,7 @@ $img :('key1' : value1,
   content: map-get($img, key1);
 }
 
-$images:img1 img2 img3 img4; //list
+$images: img1 img2 img3 img4; //list
 
 @each $i in $images {
 
@@ -296,62 +283,21 @@ $images:img1 img2 img3 img4; //list
 
 }
 
-$title : (
-  'h1' : 40px,
-  'h2' : 30px,
-  'h3' : 25px,
-  'span' : 16px,
-  '*' : 14px
-); //map
 
-@mixin title($title ,$color:null) {
-  @each $k , $v in $title {
-    #{$k} {
-      font-size: $v;
-      color: $color;
-    }
-  }  
+
+
+
+
+//  桌機字體標題
+@include title($title_d);
+// 手機字體標題
+@include m(){
+  @include title($title_m);
 }
 
-@include title($title , #f20);
-
-// 顏色
-
-
-// "primary":    $primary,
-// "secondary":  $secondary,
-// "success":    $success,
-// "info":       $info,
-// "warning":    $warning,
-// "danger":     $danger,
-// "light":      $light,
-// "dark":       $dark
-
-$color : (
-  "primary": #ff7300,
-  "secondary" : #0ed7ff,
-  "success": #00fc00,
-  "info" : #e4e4e4
-);
-
-@each $k , $v in $color {
-  .text-#{$k} {
-     color : $v;
-  }
-  .bg-#{$k} {
-     background-color: $v;
-  }
-}  
 
 
 
 
 
-
-
-
-
-
-
-
-
+@include color($colors);

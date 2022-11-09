@@ -172,9 +172,6 @@ body {
   width: 100%;
   background-color: rgb(0, 110, 255);
 }
-.wrapper h1 {
-  font-size: 36px;
-}
 .wrapper nav {
   max-width: 1200px;
   margin: 0 auto;
@@ -310,35 +307,51 @@ body {
 
 h1 {
   font-size: 40px;
-  color: #f20;
 }
 
 h2 {
   font-size: 30px;
-  color: #f20;
 }
 
 h3 {
   font-size: 25px;
-  color: #f20;
 }
 
 span {
   font-size: 16px;
-  color: #f20;
 }
 
 * {
   font-size: 14px;
-  color: #f20;
 }
 
+@media all and (max-width: 768px) {
+  h1 {
+    font-size: 100px;
+  }
+  h2 {
+    font-size: 40px;
+  }
+  h3 {
+    font-size: 35px;
+  }
+  span {
+    font-size: 14px;
+  }
+  * {
+    font-size: 13px;
+  }
+}
 .text-primary {
   color: #ff7300;
 }
 
 .bg-primary {
   background-color: #ff7300;
+}
+
+.border-primary {
+  border: #ff7300;
 }
 
 .text-secondary {
@@ -349,6 +362,10 @@ span {
   background-color: #0ed7ff;
 }
 
+.border-secondary {
+  border: #0ed7ff;
+}
+
 .text-success {
   color: #00fc00;
 }
@@ -357,12 +374,32 @@ span {
   background-color: #00fc00;
 }
 
+.border-success {
+  border: #00fc00;
+}
+
 .text-info {
   color: #e4e4e4;
 }
 
 .bg-info {
   background-color: #e4e4e4;
+}
+
+.border-info {
+  border: #e4e4e4;
+}
+
+.text-warning {
+  color: #f20;
+}
+
+.bg-warning {
+  background-color: #f20;
+}
+
+.border-warning {
+  border: #f20;
 }
 
 /*# sourceMappingURL=style.css.map */
