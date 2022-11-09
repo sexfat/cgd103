@@ -254,11 +254,11 @@ $w : 1400px;
 
 //迴圈
 
-@for $i from 1 through 10 {
-  .box-#{$i} {
-    width: $i * 1px;
-  }
-}
+// @for $i from 1 through 10 {
+//   .box-#{$i} {
+//     width: $i * 1px;
+//   }
+// }
 
 @mixin push($num) {
   @for $i from 1 through $num {
@@ -314,6 +314,44 @@ $title : (
 }
 
 @include title($title , #f20);
+
+// 顏色
+
+
+// "primary":    $primary,
+// "secondary":  $secondary,
+// "success":    $success,
+// "info":       $info,
+// "warning":    $warning,
+// "danger":     $danger,
+// "light":      $light,
+// "dark":       $dark
+
+$color : (
+  "primary": #ff7300,
+  "secondary" : #0ed7ff,
+  "success": #00fc00,
+  "info" : #e4e4e4
+);
+
+@each $k , $v in $color {
+  .text-#{$k} {
+     color : $v;
+  }
+  .bg-#{$k} {
+     background-color: $v;
+  }
+}  
+
+
+
+
+
+
+
+
+
+
 
 
 
