@@ -350,22 +350,27 @@ body {
 
 h1 {
   font-size: 40px;
+  color: #f20;
 }
 
 h2 {
   font-size: 30px;
+  color: #f20;
 }
 
 h3 {
   font-size: 25px;
+  color: #f20;
 }
 
 span {
   font-size: 16px;
+  color: #f20;
 }
 
 * {
   font-size: 14px;
+  color: #f20;
 }
 
 /*# sourceMappingURL=style.css.map */

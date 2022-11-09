@@ -304,11 +304,16 @@ $title : (
   '*' : 14px
 ); //map
 
-@each $k , $v in $title {
-  #{$k} {
-    font-size: $v;
-  }
+@mixin title($title ,$color:null) {
+  @each $k , $v in $title {
+    #{$k} {
+      font-size: $v;
+      color: $color;
+    }
+  }  
 }
+
+@include title($title , #f20);
 
 
 
