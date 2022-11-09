@@ -290,8 +290,9 @@ $images: img1 img2 img3 img4; //list
 
 //  桌機字體標題
 @include title($title_d);
+
 // 手機字體標題
-@include m(){
+@include m() {
   @include title($title_m);
 }
 
@@ -301,3 +302,24 @@ $images: img1 img2 img3 img4; //list
 
 
 @include color($colors);
+
+//btn
+$btn : ();
+
+
+//btn module
+@mixin btn_module( $btn , $r:null) {
+
+  @each $k ,$v in $btn {
+    .btn-#{$k} {
+      max-width: 300px;
+      padding: 10px 20px;
+      background-color: $v;
+      text-align: center;
+      border-radius: $r;
+    }
+  }
+
+}
+
+@include btn_module($btn)

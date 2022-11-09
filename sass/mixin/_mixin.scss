@@ -87,18 +87,3 @@
 }
 
 
-// btn
-$btn : (
-
-);
-
-
-
-@each $k ,$v in $btn {
-    .btn-#{$k} {
-        max-width: 300px;
-        padding: 10px 20px;
-        background-color: $v;
-        text-align: center;
-    }
-}
