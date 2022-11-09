@@ -406,4 +406,46 @@ span {
   border: #f20;
 }
 
+.btn-primary {
+  max-width: 300px;
+  padding: 10px 20px;
+  background-color: rgb(254, 254, 254);
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #010101;
+  transition: all ease 0.5s;
+}
+.btn-primary:hover {
+  background-color: #cbcbcb;
+}
+
+.btn-secondary {
+  max-width: 300px;
+  padding: 10px 20px;
+  background-color: #f20;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #00ddff;
+  transition: all ease 0.5s;
+}
+.btn-secondary:hover {
+  background-color: #991400;
+}
+
+.btn-white {
+  max-width: 300px;
+  padding: 10px 20px;
+  background-color: #eee;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #111111;
+  transition: all ease 0.5s;
+}
+.btn-white:hover {
+  background-color: #bbbbbb;
+}
+
 /*# sourceMappingURL=style.css.map */

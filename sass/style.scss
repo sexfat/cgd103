@@ -304,7 +304,11 @@ $images: img1 img2 img3 img4; //list
 @include color($colors);
 
 //btn
-$btn : ();
+$btn : (
+ 'primary' : rgb(254, 254, 254),
+ 'secondary' : #f20,
+ 'white' : #eee,
+);
 
 
 //btn module
@@ -317,9 +321,16 @@ $btn : ();
       background-color: $v;
       text-align: center;
       border-radius: $r;
+      cursor: pointer;
+      color:invert($v); 
+      transition: all ease .5s;
+      &:hover {
+        background-color: darken($v , 20);
+
+      }
     }
   }
 
 }
 
-@include btn_module($btn)
+@include btn_module($btn , 5px);
