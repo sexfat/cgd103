@@ -24,24 +24,24 @@
 
 
 body {
-    margin: $margin;
-    padding: 0;
-    font-size: $fontSize;
-    color: $color;
-    background-color: $bgc;
-    font-family: $fontFamily;
-    border: $null;
+  margin: $margin;
+  padding: 0;
+  font-size: $fontSize;
+  color: $color;
+  background-color: $bgc;
+  font-family: $fontFamily;
+  border: $null;
 }
 
 .wrapper {
-    @if $w {
-        width: 100%;
-    }
+  @if $w {
+    width: 100%;
+  }
 
-    @else {
-        width: 1200px;
-        margin: 0 auto;
-    }
+  @else {
+    width: 1200px;
+    margin: 0 auto;
+  }
 }
 
 
@@ -61,79 +61,88 @@ $a : 30px !default; //預設值
 
 
 .a {
-    font-size: $a;
+  font-size: $a;
 }
 
 //======  轉型字串  ==========
 $url : icon1; //url
 
 .icon {
-    background-image: url('#{$url}.jpg');
+  background-image: url('#{$url}.jpg');
 }
 
 // class / 屬性
 $class : 'bottom';
 
 .#{$class} {
-    margin-#{$class}: 10px;
+  margin-#{$class}: 10px;
 }
 
 .wrapper {
-    width: 100%;
-    background-color: rgb(0, 110, 255);
-    h1 {
-      font-size: 36px;
+  width: 100%;
+  background-color: rgb(0, 110, 255);
 
+  h1 {
+    font-size: 36px;
+
+  }
+
+  nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      width: 150px;
+      height: 50px;
+      background-color: #666;
     }
-    nav {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        .logo {
-          width: 150px;
-          height: 50px;
-          background-color: #666;  
-        }
 
-        ul {
-            list-style: none;
-            display: flex;
+    ul {
+      list-style: none;
+      display: flex;
 
-            li {
-                padding: 10px 20px;
-                background-color: rgb(247, 0, 255);
+      li {
+        padding: 10px 20px;
+        background-color: rgb(247, 0, 255);
 
-                //偽元素
-                a {
-                   color : rgb(222, 0, 0);
-                    &:first-child {
-                    color : rgb(157, 255, 0);
-                     &:hover {
-                        color : rgb(0, 217, 255);
-                     }
-                   }
-                   &:hover {
-                     color:rgb(71, 0, 0)
-                   }
-                   &::after {
-                    content: '';
-                   }
-                   &::before {
-                      content: '';
-                   }
-                }
+        //偽元素
+        a {
+          color: rgb(222, 0, 0);
 
+          &:first-child {
+            color: rgb(157, 255, 0);
+
+            &:hover {
+              color: rgb(0, 217, 255);
             }
+          }
+
+          &:hover {
+            color: rgb(71, 0, 0)
+          }
+
+          &::after {
+            content: '';
+          }
+
+          &::before {
+            content: '';
+          }
         }
+
+      }
     }
+  }
 }
+
 // 運算
 
 .box {
-  width:  10px + 10;
-  height:  100px - 20px;
+  width: 10px + 10;
+  height: 100px - 20px;
   margin: 10 * 10 + px;
   //font : calc(20 / 5) + px; //除法要特別注意 
 }
@@ -141,9 +150,11 @@ $class : 'bottom';
 $w : 1200;
 
 .wrapper-full {
-  @if $w == 100 {
+  @if $w ==100 {
     width: 100vw;
-  }@else if $w == 1200 {
+  }
+
+  @else if $w ==1200 {
     width: 1200px;
     margin: 0 auto;
   }
@@ -151,26 +162,31 @@ $w : 1200;
 
 
 .btn {
-    $outline : true;
-    $outline_bgc : #e2e2e2;
+  $outline : true;
+  $outline_bgc : #e2e2e2;
 
-    padding: 10px 20px;
-    text-align: center;
-    cursor: pointer;
-    transition: .3s all ease;
-    @if $outline{
-        border: 1px solid #333;
-        background-color: $outline_bgc;
-        &:hover {
-            background-color: darken($outline_bgc  , 60); //sass顏色函式 
-        }
-    }@else {
-        background-color: #333;
-        color: #fff;
-        &:hover {
-            background-color: rgb(19, 19, 19);  
-        }  
+  padding: 10px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: .3s all ease;
+
+  @if $outline {
+    border: 1px solid #333;
+    background-color: $outline_bgc;
+
+    &:hover {
+      background-color: darken($outline_bgc , 60); //sass顏色函式 
     }
+  }
+
+  @else {
+    background-color: #333;
+    color: #fff;
+
+    &:hover {
+      background-color: rgb(19, 19, 19);
+    }
+  }
 }
 
 // mixin 
@@ -190,28 +206,34 @@ $w : 1400px;
 
 
 .box-1 {
- @include boxcenter(200px);
- @include m(){
-   width: 100%;
- }
- background-color: #eee;
- height: 100px;
+  @include boxcenter(200px);
+
+  @include m() {
+    width: 100%;
+  }
+
+  background-color: #eee;
+  height: 100px;
 }
 
 .box-2 {
   @include boxcenter(136px);
-  @include m(){
+
+  @include m() {
     @include boxcenter(100%);
   }
+
   background-color: #f20;
   height: 100px;
 }
 
 .box-3 {
-  @include border(#f20,  50%){
-    color:rgb(0, 110, 255);
+  @include border(#f20, 50%) {
+    color: rgb(0, 110, 255);
     background-color: rgb(255, 84, 84);
-  };
+  }
+
+  ;
   width:100px;
   height: 100px;
   margin: 0 auto;
@@ -222,52 +244,54 @@ $w : 1400px;
 
 
 .wrapper {
-    @include layout(1200);
-    @include m(){
-        @include layout(full);
-    }
+  @include layout(1200);
+
+  @include m() {
+    @include layout(full);
+  }
 }
 
 
 //迴圈
 
 @for $i from 1 through 10 {
- .box-#{$i} {
+  .box-#{$i} {
     width: $i * 1px;
- }
+  }
 }
 
-@mixin push($num){
-    @for $i from 1 through $num {
-        .push-#{$i} {
-          position: relative;
-          left: $i * 1px
-        }
-      }
+@mixin push($num) {
+  @for $i from 1 through $num {
+    .push-#{$i} {
+      position: relative;
+      left: $i * 1px
+    }
+  }
 }
 
 
 // @include push(100);
 
+// @each
+
+$img :('key1' : value1,
+  'key2' : value2); //map
 
 
+.box {
+  content: map-get($img, key1);
+}
 
+$images:img1 img2 img3 img4; //list
 
+@each $i in $images {
 
+  .img_#{$i} {
+    background-image: url('images/#{$i}.jpg');
+    // background-attachment: fixed;
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // width: 100%;
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}

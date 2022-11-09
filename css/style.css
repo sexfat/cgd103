@@ -143,7 +143,7 @@
   }
 }
 body {
-  margin: 10px;
+  margin: 10px 10px 10px;
   padding: 0;
   font-size: 16px;
   color: #333;
@@ -326,6 +326,26 @@ body {
 
 .box-10 {
   width: 10px;
+}
+
+.box {
+  content: value1;
+}
+
+.img_img1 {
+  background-image: url("images/img1.jpg");
+}
+
+.img_img2 {
+  background-image: url("images/img2.jpg");
+}
+
+.img_img3 {
+  background-image: url("images/img3.jpg");
+}
+
+.img_img4 {
+  background-image: url("images/img4.jpg");
 }
 
 /*# sourceMappingURL=style.css.map */
