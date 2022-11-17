@@ -1,0 +1,27 @@
+{
+  "name": "cgd103_gulp",
+  "version": "1.0.0",
+  "description": "1.  `npm install`\r 2. 開發用\r 3. 上線用",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sexfat/cgd103.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sexfat/cgd103/issues"
+  },
+  "homepage": "https://github.com/sexfat/cgd103#readme",
+  "devDependencies": {
+    "webpack": "^4.43.0"
+  },
+  "dependencies": {
+    "gsap": "^3.11.3",
+    "jquery": "^3.6.1"
+  }
+}
