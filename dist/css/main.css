@@ -1,8 +1,25 @@
 body {
   font-size: 20px;
-  color: aqua;
+  background-color: rgb(0, 255, 170);
+  color: rgb(255, 242, 0);
 }
 body .wrapper {
   width: 1200px;
   margin: 0 auto;
+  height: 3000px;
+  background-color: rgb(52, 52, 52);
+}
+body .wrapper ul, body .wrapper li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+body .wrapper ul {
+  display: flex;
+}
+body .wrapper ul li {
+  margin: 0 20px;
+}
+body .wrapper h3 {
+  font-size: 100px;
 }
