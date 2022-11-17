@@ -42,6 +42,10 @@ function file() {
 
 exports.f = file;
 
+
+
+
+
 const rename = require('gulp-rename');
 
 //壓縮css
@@ -141,25 +145,7 @@ function watchfile(){
 exports.w = watchfile;
 
 
-const browserSync = require('browser-sync');
-const reload = browserSync.reload;
 
-
-function browser(done) {
-    browserSync.init({
-        server: {
-            baseDir: "./dist",
-            index: "index.html"
-        },
-        port: 3000
-    });
-    watch(['src/*.html' , 'src/layout/*.html'], html).on('change' , reload)
-    watch(['src/sass/*.scss' , 'src/sass/**/*.scss'] , styleSass).on('change' , reload)
-    done();
-}
-
-//開發
-exports.default = browser
 
 // ======== 上線用 =======
 
@@ -173,6 +159,12 @@ function min_images(){
 }
 
 exports.minify = min_images;
+
+//圖片搬家
+function img(){
+    return src(['src/images/*.*' , 'src/images/**/*.*']).pipe(dest('dist/images'))
+ }
+
 
 
 // js 打包 es6 -> es5
@@ -188,6 +180,50 @@ function babel5() {
 }
 
 exports.es5 = babel5;
+
+
+const clean = require('gulp-clean');
+
+function clear() {
+  return src('dist' ,{ read: false ,allowEmpty: true })//不去讀檔案結構，增加刪除效率  / allowEmpty : 允許刪除空的檔案
+  .pipe(clean({force: true})); //強制刪除檔案 
+}
+
+exports.cls = clear;
+
+
+const browserSync = require('browser-sync');
+const reload = browserSync.reload;
+
+
+function browser(done) {
+    browserSync.init({
+        server: {
+            baseDir: "./dist",
+            index: "index.html"
+        },
+        port: 3000
+    });
+    watch(['src/*.html' , 'src/layout/*.html'], html).on('change' , reload)
+    watch(['src/sass/*.scss' , 'src/sass/**/*.scss'] , styleSass).on('change' , reload)
+    watch(['src/images/*.*' , 'src/images/**/*.*'] , img).on('change' , reload)
+    done();
+}
+// exports.default = browser
+
+
+
+
+//開發用 
+
+exports.default = browser
+
+
+//上線用
+
+
+
+
 
 
 
