@@ -207,6 +207,7 @@ function browser(done) {
     watch(['src/*.html' , 'src/layout/*.html'], html).on('change' , reload)
     watch(['src/sass/*.scss' , 'src/sass/**/*.scss'] , styleSass).on('change' , reload)
     watch(['src/images/*.*' , 'src/images/**/*.*'] , img).on('change' , reload)
+    watch('src/js/*.js' , js).on('change' , reload)
     done();
 }
 // exports.default = browser
@@ -215,11 +216,11 @@ function browser(done) {
 
 
 //開發用 
-
-exports.default = browser
+exports.default =  series(parallel(html ,styleSass ,img ,js) ,browser);
 
 
 //上線用
+exports.online = series(clear  , parallel( html , styleSass , min_images ,babel5)) 
 
 
 
