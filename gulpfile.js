@@ -137,6 +137,26 @@ function watchfile(){
 exports.w = watchfile;
 
 
+const browserSync = require('browser-sync');
+const reload = browserSync.reload;
+
+
+function browser(done) {
+    browserSync.init({
+        server: {
+            baseDir: "./dist",
+            index: "index.html"
+        },
+        port: 3000
+    });
+    watch(['src/*.html' , 'src/layout/*.html'], html).on('change' , reload)
+    watch(['src/sass/*.scss' , 'src/sass/**/*.scss'] , styleSass).on('change' , reload)
+    done();
+}
+
+exports.default = browser
+
+
 
 
 
