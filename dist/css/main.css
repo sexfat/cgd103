@@ -9,7 +9,8 @@ body .wrapper {
   height: 3000px;
   background-color: rgb(52, 52, 52);
 }
-body .wrapper ul, body .wrapper li {
+body .wrapper ul,
+body .wrapper li {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -22,4 +23,13 @@ body .wrapper ul li {
 }
 body .wrapper h3 {
   font-size: 100px;
+}
+
+.example {
+  display: grid;
+  transition: all 0.5s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  background: linear-gradient(to bottom, white, black);
 }

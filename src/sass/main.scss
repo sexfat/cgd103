@@ -1,27 +1,40 @@
 body {
-   font-size: 20px;
-   background-color: rgb(0, 255, 170);
-   color: rgb(255, 242, 0);
-  
- .wrapper {
-     width: 1200px;
-     margin:  0 auto;
-     height: 3000px;
-     background-color: rgb(52, 52, 52);
-     ul , li {
+  font-size: 20px;
+  background-color: rgb(0, 255, 170);
+  color: rgb(255, 242, 0);
+
+  .wrapper {
+    width: 1200px;
+    margin: 0 auto;
+    height: 3000px;
+    background-color: rgb(52, 52, 52);
+
+    ul,
+    li {
       list-style: none;
-      margin: 0 ;
+      margin: 0;
       padding: 0;
       // height: 3000px;
-     }
-     ul {
-     display: flex;
-     li {
-       margin: 0 20px;
-     }
-     }
-     h3 {
+    }
+
+    ul {
+      display: flex;
+
+      li {
+        margin: 0 20px;
+      }
+    }
+
+    h3 {
       font-size: 100px;
     }
- }
+  }
+}
+
+
+.example {
+  display: grid;
+  transition: all .5s;
+  user-select: none;
+  background: linear-gradient(to bottom, white, black);
 }

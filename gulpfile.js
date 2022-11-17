@@ -175,6 +175,21 @@ function min_images(){
 exports.minify = min_images;
 
 
+// js 打包 es6 -> es5
+
+const babel = require('gulp-babel');
+
+function babel5() {
+    return src('src/js/*.js')
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))
+        .pipe(dest('dist/js'));
+}
+
+exports.es5 = babel5;
+
+
 
 
 
