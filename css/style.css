@@ -409,15 +409,15 @@ span {
 .btn-primary {
   max-width: 300px;
   padding: 10px 20px;
-  background-color: rgb(254, 254, 254);
+  background-color: #333;
   text-align: center;
-  border-radius: 5px;
+  border-radius: 20px;
   cursor: pointer;
-  color: #010101;
+  color: #000;
   transition: all ease 0.5s;
 }
 .btn-primary:hover {
-  background-color: #cbcbcb;
+  background-color: black;
 }
 
 .btn-secondary {
@@ -425,9 +425,9 @@ span {
   padding: 10px 20px;
   background-color: #f20;
   text-align: center;
-  border-radius: 5px;
+  border-radius: 20px;
   cursor: pointer;
-  color: #00ddff;
+  color: #000;
   transition: all ease 0.5s;
 }
 .btn-secondary:hover {
@@ -439,9 +439,9 @@ span {
   padding: 10px 20px;
   background-color: #eee;
   text-align: center;
-  border-radius: 5px;
+  border-radius: 20px;
   cursor: pointer;
-  color: #111111;
+  color: #000;
   transition: all ease 0.5s;
 }
 .btn-white:hover {

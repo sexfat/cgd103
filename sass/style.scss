@@ -304,15 +304,13 @@ $images: img1 img2 img3 img4; //list
 @include color($colors);
 
 //btn
-$btn : (
- 'primary' : rgb(254, 254, 254),
- 'secondary' : #f20,
- 'white' : #eee,
+$btn : ('primary' : #333,
+  'secondary' : #f20,
+  'white' : #eee,
 );
 
-
 //btn module
-@mixin btn_module( $btn , $r:null) {
+@mixin btn_module($btn , $r: null) {
 
   @each $k ,$v in $btn {
     .btn-#{$k} {
@@ -322,15 +320,20 @@ $btn : (
       text-align: center;
       border-radius: $r;
       cursor: pointer;
-      color:invert($v); 
+
+      @if $v ==#000000 and $v ==black {
+        color: invert($v);
+      }@else{
+        color : #000
+      }
+
       transition: all ease .5s;
+
       &:hover {
         background-color: darken($v , 20);
-
       }
     }
   }
-
 }
 
-@include btn_module($btn , 5px);
+@include btn_module($btn , 20px);
