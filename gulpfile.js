@@ -154,7 +154,23 @@ function browser(done) {
     done();
 }
 
+//開發
 exports.default = browser
+
+// ======== 上線用 =======
+
+// 壓縮圖片
+
+const imagemin = require('gulp-imagemin');
+
+function min_images(){
+    return src('src/images/*.*')
+    .pipe(imagemin())
+    .pipe(dest('dist/images'))
+}
+
+exports.minify = min_images;
+
 
 
 
