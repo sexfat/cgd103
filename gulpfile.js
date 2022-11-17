@@ -98,11 +98,15 @@ exports.re = cssname;
 
 //sass => css
 const sass = require('gulp-sass')(require('sass'));
+const autoprefixer = require('gulp-autoprefixer');
 
 
 function styleSass() {
     return src('src/sass/*.scss')
         .pipe(sass.sync().on('error', sass.logError))
+        .pipe(autoprefixer({
+            cascade: false
+        }))
         .pipe(dest('./dist/css'));
 }
 
@@ -159,12 +163,11 @@ exports.default = browser
 
 // ======== 上線用 =======
 
-// 壓縮圖片
-
+//  7 壓縮圖片
 const imagemin = require('gulp-imagemin');
 
 function min_images(){
-    return src('src/images/*.*')
+    return src(['src/images/*.*' , 'src/**/*.*'])
     .pipe(imagemin())
     .pipe(dest('dist/images'))
 }
