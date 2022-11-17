@@ -1,0 +1,89 @@
+@mixin layout($w) {
+    @if $w =='full' {
+        width: 100%;
+    }
+
+    @else {
+        width: $w + px;
+        margin: 0 auto;
+    }
+}
+
+@mixin border($borderColor , $borderRadius) {
+    border: 1px solid $borderColor;
+    border-radius: $borderRadius;
+    @content;
+}
+
+@mixin boxcenter($w , $top: 0px) {
+    width: $w;
+    margin: $top auto 0;
+    @include border(#333, 10px);
+}
+
+@mixin push($num) {
+    @for $i from 1 through $num {
+        .push-#{$i} {
+            position: relative;
+            left: $i * 1px
+        }
+    }
+}
+
+
+@mixin m() {
+    @media all and (max-width: $m-breakpoint) {
+        @content;
+    }
+}
+
+@mixin t() {
+    @media all and (max-width: $t-breakpoint) {
+        @content;
+    }
+}
+
+
+
+@mixin grid($num , $s: null) {
+    @for $i from 1 through $num {
+        .col#{$s}-#{$i} {
+            width: ($i / $num) * 100%;
+        }
+    }
+}
+
+// 標題
+@mixin title($title , $color: null) {
+
+    @each $k ,
+    $v in $title {
+        #{$k} {
+            font-size: $v;
+            color: $color;
+        }
+    }
+}
+
+
+// color 
+
+@mixin color($colors) {
+
+    @each $k ,
+    $v in $colors {
+        .text-#{$k} {
+            color: $v;
+        }
+
+        .bg-#{$k} {
+            background-color: $v;
+        }
+
+        .border-#{$k} {
+            border: $v;
+        }
+    }
+}
+
+
