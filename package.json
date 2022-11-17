@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "安裝套件": "npm install",
-    "開發用" : "gulp",
-    "上線用" :"gulp online"
+    "開發用": "gulp",
+    "上線用": "gulp online"
   },
   "repository": {
     "type": "git",

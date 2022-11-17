@@ -153,7 +153,7 @@ exports.w = watchfile;
 const imagemin = require('gulp-imagemin');
 
 function min_images(){
-    return src(['src/images/*.*' , 'src/**/*.*'])
+    return src(['src/images/*.*' , 'src/images/**/*.*'])
     .pipe(imagemin())
     .pipe(dest('dist/images'))
 }
