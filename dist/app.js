@@ -145,18 +145,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 
 /***/ }),
 
-/***/ "./src/css/header.css":
-/*!****************************!*\
-  !*** ./src/css/header.css ***!
-  \****************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack:///./src/css/header.css?");
-
-/***/ }),
-
 /***/ "./src/css/style.css":
 /*!***************************!*\
   !*** ./src/css/style.css ***!
@@ -177,7 +165,19 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap */ \"./node_modules/gsap/index.js\");\n/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./css/style.css */ \"./src/css/style.css\");\n/* harmony import */ var _css_header_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./css/header.css */ \"./src/css/header.css\");\n/* harmony import */ var _css_footer_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./css/footer.css */ \"./src/css/footer.css\");\n\r\n\r\n //css注入\r\n //css注入\r\n //css注入\r\n\r\nconsole.log('start');\r\n\r\n// jquery\r\njquery__WEBPACK_IMPORTED_MODULE_0___default()('body').css('background-color' , '#333');\r\n\r\n// gsap\r\ngsap__WEBPACK_IMPORTED_MODULE_1__[\"default\"].set('.box' , {\r\n     x : 300,\r\n     y: 400\r\n\r\n\r\n})\r\ngsap__WEBPACK_IMPORTED_MODULE_1__[\"default\"].to('.box' , {\r\n     //x: 300,\r\n     //y: 700,\r\n     duration : 2,\r\n     rotation : 360,\r\n     repeat: -1,\r\n     scale: 3\r\n})\r\n\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap */ \"./node_modules/gsap/index.js\");\n/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./css/style.css */ \"./src/css/style.css\");\n/* harmony import */ var _css_footer_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./css/footer.css */ \"./src/css/footer.css\");\n/* harmony import */ var _sass_style_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./sass/style.scss */ \"./src/sass/style.scss\");\n\r\n\r\n //css注入\r\n// import './css/header.css'; //css注入\r\n //css注入\r\n // sass \r\n\r\nconsole.log('start');\r\n\r\n// jquery\r\njquery__WEBPACK_IMPORTED_MODULE_0___default()('body').css('background-color' , '#333');\r\n\r\n// gsap\r\ngsap__WEBPACK_IMPORTED_MODULE_1__[\"default\"].set('.box' , {\r\n     x : 300,\r\n     y: 400\r\n\r\n\r\n})\r\ngsap__WEBPACK_IMPORTED_MODULE_1__[\"default\"].to('.box' , {\r\n     //x: 300,\r\n     //y: 700,\r\n     duration : 2,\r\n     rotation : 360,\r\n     repeat: -1,\r\n     scale: 3\r\n})\r\n\n\n//# sourceURL=webpack:///./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/sass/style.scss":
+/*!*****************************!*\
+  !*** ./src/sass/style.scss ***!
+  \*****************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack:///./src/sass/style.scss?");
 
 /***/ })
 

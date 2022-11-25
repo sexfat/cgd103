@@ -1,17 +1,19 @@
-.box{
-    width:  80px;
-    height:  80px;
-    background-color: rgb(51, 255, 0);
-                }
-header {
-  height: 100px;
-  background-color: #eee;
-  width: 100%;
+.box {
+  width: 80px;
+  height: 80px;
+  background-color: #33ff00; }
 
-}
 footer {
-    height: 30px;
-    background-color: rgb(155, 155, 155);
-    width: 100%;
-  
-  }
+  height: 30px;
+  background-color: #9b9b9b;
+  width: 100%; }
+
+header {
+  background-color: #fe0;
+  height: 100px;
+  width: 100%; }
+
+body {
+  font-size: 30px;
+  color: #f2f2f2; }
+
