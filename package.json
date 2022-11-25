@@ -4,7 +4,9 @@
   "description": "1.  `npm install`\r 2. 開發用\r 3. 上線用",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "安裝套件" : "npm install",
+    "開發": "webpack-dev-server",
+    "上線":  "webpack -p"
   },
   "repository": {
     "type": "git",
