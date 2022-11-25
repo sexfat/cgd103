@@ -37,6 +37,12 @@ module.exports = {
             inject: 'body', //預設<body> js </body>  head or body
             template: './src/index.html',//來源
             filename: 'index.html'// 目的地
+        }),
+        new HtmlWebpackPlugin({
+            chunks: ['about'],  //選擇注入資源 chunk
+            inject: 'body', //預設<body> js </body>  head or body
+            template: './src/about.html',//來源
+            filename: 'about.html'// 目的地
         })
 
     ],  // 對應的插件
