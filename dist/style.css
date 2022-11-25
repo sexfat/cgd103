@@ -1,0 +1,17 @@
+.box{
+    width:  80px;
+    height:  80px;
+    background-color: rgb(51, 255, 0);
+                }
+header {
+  height: 100px;
+  background-color: #eee;
+  width: 100%;
+
+}
+footer {
+    height: 30px;
+    background-color: rgb(155, 155, 155);
+    width: 100%;
+  
+  }
