@@ -5,6 +5,8 @@ const {
     CleanWebpackPlugin
 } = require('clean-webpack-plugin');
 
+const webpack  = require('webpack');
+
 module.exports = {
     entry: {
          index :'./src/index.js',  // app => chunks
@@ -49,6 +51,10 @@ module.exports = {
     },       // 處裡對應模組
     plugins: [
         new CleanWebpackPlugin(),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery'
+          }),
         new MiniCssExtractPlugin({
             filename: "./css/[name].css"
         }),
@@ -65,7 +71,13 @@ module.exports = {
             filename: 'about.html'// 目的地
         })
 
-    ],  // 對應的插件
+    ],
+    resolve: {
+        alias: {
+           vue: 'vue/dist/vue.js'
+        }
+      },
+      // 對應的插件
     devServer: {
         contentBase: './dist',
         host: 'localhost',

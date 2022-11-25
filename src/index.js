@@ -1,4 +1,4 @@
-import $ from "jquery";
+// import $ from "jquery";
 import gsap from "gsap";
 import './css/style.css'; //css注入
 import './css/footer.css'; //css注入
