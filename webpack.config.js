@@ -1,6 +1,9 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const {
+    CleanWebpackPlugin
+} = require('clean-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -9,7 +12,7 @@ module.exports = {
     },               // 入口文件
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name].js'
+        filename: 'js/[name].js'
     },              // 出口文件
     module: {
         rules: [{
@@ -29,8 +32,9 @@ module.exports = {
 
     },          // 處裡對應模組
     plugins: [
+        new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
-            filename: "./[name].css"
+            filename: "./css/[name].css"
         }),
         new HtmlWebpackPlugin({
             chunks: ['index'],  //選擇注入資源 chunk
