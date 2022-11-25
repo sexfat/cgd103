@@ -17,7 +17,7 @@ gsap.set('.box' , {
 gsap.to('.box' , {
      //x: 300,
      //y: 700,
-     duration : .5,
+     duration : 2,
      rotation : 360,
      repeat: -1,
      scale: 3
