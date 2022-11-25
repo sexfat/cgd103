@@ -33,7 +33,7 @@ module.exports = {
             filename: "./[name].css"
         }),
         new HtmlWebpackPlugin({
-            chunks: ['app'],  //選擇注入資源 chunk
+            chunks: ['index'],  //選擇注入資源 chunk
             inject: 'body', //預設<body> js </body>  head or body
             template: './src/index.html',//來源
             filename: 'index.html'// 目的地
