@@ -1,7 +1,6 @@
 import $ from "jquery";
 import gsap from "gsap";
 import './css/style.css'; //css注入
-// import './css/header.css'; //css注入
 import './css/footer.css'; //css注入
 import './sass/style.scss' // sass 
 
@@ -17,11 +16,15 @@ gsap.set('.box' , {
 
 
 })
-gsap.to('.box' , {
+const tl = gsap.timeline();
+tl.to('.box' , {
      //x: 300,
      //y: 700,
      duration : 2,
      rotation : 360,
-     repeat: -1,
      scale: 3
+}).to('.box' , {
+     x: 700,
+     y: 500,
+     backgroundColor : '#f20'
 })

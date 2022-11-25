@@ -20,17 +20,33 @@ module.exports = {
             test: /\.(sass|scss|css)$/,
             //順序是由下到上 css > style
             use: [{
-                loader: MiniCssExtractPlugin.loader,
-                options: {
-                    publicPath: './dist'
-                }
-            },
+                    loader: MiniCssExtractPlugin.loader,
+                    options: {
+                      publicPath: './dist'
+                    }
+                  },
+                // 'style-loader',//跟MiniCssExtractPlugin 會衝突所以要關掉
                 'css-loader',
                 'sass-loader'
             ],
-        }]
+        },
+        //babel loader
+        {
+            test: /\.(js)$/,
+            exclude: /(node_modules)/,
 
-    },          // 處裡對應模組
+            use: [{
+                loader: 'babel-loader',
+                options: {
+                    presets: ['@babel/preset-env']
+                }
+            }],
+            include: path.resolve(__dirname, 'src'),
+        },
+
+      ]
+
+    },       // 處裡對應模組
     plugins: [
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
