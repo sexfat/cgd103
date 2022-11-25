@@ -13,5 +13,5 @@ gsap.to('.box' , {
      y: 700,
      duration : .5,
      rotation : 270,
-     scale: 2
+     scale: 3
 })
